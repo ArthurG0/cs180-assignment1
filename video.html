@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <ul class="headerNavBar">
+            <li class="navBarElement"><a href="./text.html">Text</a></li>
+            <li class="navBarElement"><a href="./image.html">Image</a></li>
+            <li class="navBarElement selected"><a href="./video.html">Video</a></li>
+            <li class="navBarElement"><a href="./table.html">Table</a></li>
+        </ul>
+    </head>
+
+    <body>
+        <br><br><br>
+        <h2>Jets going at the speed of sound!</h2>
+        <video controls src="./assets/supersonic_1.mp4"></video>
+        <video controls src="./assets/supersonic_2.mp4"></video>
+        <video controls src="./assets/supersonic_3.mp4"></video>
+        
+    </body>
+    
+</html>
+
+<style>
+
+video {
+    margin-right: 60px;
+    width: 480px;
+    height: 300px;  
+}
+
+li.navBarElement{
+    display: inline;
+    float: left;
+    width: 100px;
+    background-color: #9966ff;
+    margin-top :auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: 1px solid black;
+}
+
+li.navBarElement.selected{
+    background-color: #8000ff;
+}
+
+li a {
+    color: white;
+    display: block;
+    font-family: "Courier";
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    
+}
+
+ul.headerNavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+</style>

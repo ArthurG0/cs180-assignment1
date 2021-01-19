@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <ul class="headerNavBar">
+            <li class="navBarElement selected"><a href="./text.html">Text</a></li>
+            <li class="navBarElement"><a href="./image.html">Image</a></li>
+            <li class="navBarElement"><a href="./video.html">Video</a></li>
+            <li class="navBarElement"><a href="./table.html">Table</a></li>
+        </ul>
+    </head>
+
+    <body>
+        <br><br><br>
+        <form>
+            <label for="fname" >First name:</label><br>
+            <input type="text" id="fname" name="fname"><br><br>
+            
+            <label for="flname" >Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+
+            <label for="fname" >Choose favorite CS185 TA:</label><br><br>
+            <input type="radio" name="fav_ta" value="jinesh">Jinesh Jhonsa<br>
+            <input type="radio" name="fav_ta" value="dennis">Dennis Zhang<br>
+            <input type="radio" name="fav_ta" value="wenda">Wenda Xu<br><br><br>
+
+            <input type="submit" value="Done, submit">
+        </form>
+    </body>
+</html>
+
+<style>
+
+body {
+    display: block;
+    float: none;
+}
+
+li.navBarElement{
+    display: inline;
+    float: left;
+    width: 100px;
+    background-color: #9966ff;
+    margin-top :auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: 1px solid black;
+}
+
+li.navBarElement.selected{
+    background-color: #8000ff;
+}
+
+li.navBarElement a {
+    color: white;
+    display: block;
+    font-family: "Courier";
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    
+}
+
+ul.headerNavBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+}
+
+</style>

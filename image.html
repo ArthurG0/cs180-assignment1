@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <ul class="headerNavBar">
+            <li class="navBarElement"><a href="./text.html">Text</a></li>
+            <li class="navBarElement selected"><a href="./image.html">Image</a></li>
+            <li class="navBarElement"><a href="./video.html">Video</a></li>
+            <li class="navBarElement"><a href="./table.html">Table</a></li>
+        </ul>
+    </head>
+
+    <body>
+        <br><br><br>
+        <h2>Porsche 911 through generations: 1964-2016</h2>
+        <img class="porscheImage" src="./assets/porsche_1.jpg">
+        <img class="porscheImage" src="./assets/porsche_2.jpg">
+        <img class="porscheImage" src="./assets/porsche_3.jpg">
+        <img class="porscheImage" src="./assets/porsche_4.jpg">
+        <img class="porscheImage" src="./assets/porsche_5.jpeg">
+        <img class="porscheImage" src="./assets/porsche_6.jpg">
+        <img class="porscheImage" src="./assets/porsche_7.jpg">
+        
+    </body>
+
+</html>
+
+<style>
+
+    img.porscheImage {
+        width: 400px;
+        height: 300px;
+        margin-right: 150px;
+        margin-bottom: 100px;
+    }
+
+    li.navBarElement{
+        display: inline;
+        float: left;
+        width: 100px;
+        background-color: #9966ff;
+        margin-top :auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-right: 1px solid black;
+    }
+    
+    li.navBarElement.selected{
+        background-color: #8000ff;
+    }
+    
+    li a {
+        color: white;
+        display: block;
+        font-family: "Courier";
+        text-decoration: none;
+        padding: 14px 16px;
+        text-align: center;
+        
+    }
+    
+    ul.headerNavBar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    
+    }
+    
+    </style>
