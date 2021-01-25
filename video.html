@@ -7,60 +7,123 @@
             <li class="navBarElement"><a href="./image.html">Image</a></li>
             <li class="navBarElement selected"><a href="./video.html">Video</a></li>
             <li class="navBarElement"><a href="./table.html">Table</a></li>
+            <li class="navBarElement"><a href="./email.html">Email</a></li>
         </ul>
     </head>
 
     <body>
         <br><br><br>
         <h2>Jets going at the speed of sound!</h2>
-        <video controls src="./assets/supersonic_1.mp4"></video>
-        <video controls src="./assets/supersonic_2.mp4"></video>
-        <video controls src="./assets/supersonic_3.mp4"></video>
-        
+        <div class="flex">
+            <video  src="./assets/supersonic_1.mp4"></video>
+            <video  src="./assets/supersonic_2.mp4"></video>
+            <video  src="./assets/supersonic_3.mp4"></video>
+        </div>
     </body>
     
 </html>
 
 <style>
 
-video {
-    margin-right: 60px;
-    width: 480px;
-    height: 300px;  
-}
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 
-li.navBarElement{
-    display: inline;
-    float: left;
-    width: 100px;
-    background-color: #9966ff;
-    margin-top :auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    border-right: 1px solid black;
-}
+    .flex > * {
+        margin: 10px 70px 20px 10px
+    }
 
-li.navBarElement.selected{
-    background-color: #8000ff;
-}
+    video {
+        margin-right: 60px;
+        width: 300px; 
+    }
 
-li a {
-    color: white;
-    display: block;
-    font-family: "Courier";
-    text-decoration: none;
-    padding: 14px 16px;
-    text-align: center;
+    li.navBarElement{
+        display: inline;
+        float: left;
+        width: 100px;
+        background-color: #9966ff;
+        margin-top :auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-right: 1px solid black;
+    }
     
-}
+    li.navBarElement.selected{
+        background-color: #6a02d3;
+    }
 
-ul.headerNavBar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    li.navBarElement.selected:hover{
+        background-color: #6a02d3;
+    }
 
-}
+    li.navBarElement:hover{
+        background-color: #c0a0ff;
+    }
+
+    li a {
+        color: white;
+        display: block;
+        font-family: "Courier";
+        text-decoration: none;
+        padding: 14px 16px;
+        text-align: center;
+        
+    }
+
+    ul.headerNavBar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+    }
 
 </style>
+
+<script>
+
+    Array.from(document.querySelectorAll("video")).forEach(x => {
+        x.onclick = function () {
+            
+            let flexElement = document.querySelector(".flex")
+            let grayOverlay = document.createElement("div")
+            let overlayVideo = document.createElement("video")
+            overlayVideo.setAttribute("src", x.getAttribute("src"))
+            overlayVideo.setAttribute("controls", "true")
+            overlayVideo.style.width = "90vmin"
+            overlayVideo.style.opacity = "1"
+            overlayVideo.style.zIndex = "10000"
+            overlayVideo.style.margin = "auto"
+            overlayVideo.style.position = "fixed"
+            overlayVideo.style.top = "50vh"
+            overlayVideo.style.left = "50vw"
+            overlayVideo.style.transform = "translate( -50%, -50% )"
+
+            grayOverlay.style.position = "fixed"
+            grayOverlay.style.display = "flex"
+            grayOverlay.style.alignItems = "center"
+            grayOverlay.style.justifyContent = "center"
+            grayOverlay.style.top = "0"
+            grayOverlay.style.left = "0"
+            grayOverlay.style.width = "100%"
+            grayOverlay.style.height = "100%"
+            grayOverlay.style.backgroundColor = "#000000"
+            grayOverlay.style.opacity = "0"
+
+            flexElement.appendChild(grayOverlay)
+            flexElement.appendChild(overlayVideo)
+
+            grayOverlay.onclick = function () {
+                flexElement.removeChild(grayOverlay)
+                flexElement.removeChild(overlayVideo)
+            }
+
+        }
+        
+    })
+</script>

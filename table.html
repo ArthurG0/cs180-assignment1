@@ -7,6 +7,7 @@
             <li class="navBarElement"><a href="./image.html">Image</a></li>
             <li class="navBarElement"><a href="./video.html">Video</a></li>
             <li class="navBarElement selected"><a href="./table.html">Table</a></li>
+            <li class="navBarElement"><a href="./email.html">Email</a></li>
         </ul>
     </head>
 
@@ -78,21 +79,21 @@
 
 <style>
 
-tr {
-    height: 30px;
-}
-
-table {
-    border-collapse: collapse;
-    border: 2px solid black;
+    tr {
+        height: 30px;
     }
 
-tr{
-    text-align: center;
-}
+    table {
+        border-collapse: collapse;
+        border: 2px solid black;
+        }
+
+    tr{
+        text-align: center;
+    }
 
 
-li.navBarElement{
+    li.navBarElement{
         display: inline;
         float: left;
         width: 100px;
@@ -105,7 +106,15 @@ li.navBarElement{
     }
     
     li.navBarElement.selected{
-        background-color: #8000ff;
+        background-color: #6a02d3;
+    }
+
+    li.navBarElement.selected:hover{
+        background-color: #6a02d3;
+    }
+
+    li.navBarElement:hover{
+        background-color: #c0a0ff;
     }
     
     li a {

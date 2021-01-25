@@ -7,6 +7,7 @@
             <li class="navBarElement"><a href="./image.html">Image</a></li>
             <li class="navBarElement"><a href="./video.html">Video</a></li>
             <li class="navBarElement"><a href="./table.html">Table</a></li>
+            <li class="navBarElement"><a href="./email.html">Email</a></li>
         </ul>
     </head>
 
@@ -31,43 +32,51 @@
 
 <style>
 
-body {
-    display: block;
-    float: none;
-}
+    body {
+        display: block;
+        float: none;
+    }
 
-li.navBarElement{
-    display: inline;
-    float: left;
-    width: 100px;
-    background-color: #9966ff;
-    margin-top :auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    border-right: 1px solid black;
-}
-
-li.navBarElement.selected{
-    background-color: #8000ff;
-}
-
-li.navBarElement a {
-    color: white;
-    display: block;
-    font-family: "Courier";
-    text-decoration: none;
-    padding: 14px 16px;
-    text-align: center;
+    li.navBarElement{
+        display: inline;
+        float: left;
+        width: 100px;
+        background-color: #9966ff;
+        margin-top :auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-right: 1px solid black;
+    }
     
-}
+    li.navBarElement.selected{
+        background-color: #6a02d3;
+    }
 
-ul.headerNavBar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+    li.navBarElement.selected:hover{
+        background-color: #6a02d3;
+    }
 
-}
+    li.navBarElement:hover{
+        background-color: #c0a0ff;
+    }
+
+    li.navBarElement a {
+        color: white;
+        display: block;
+        font-family: "Courier";
+        text-decoration: none;
+        padding: 14px 16px;
+        text-align: center;
+        
+    }
+
+    ul.headerNavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    }
 
 </style>
