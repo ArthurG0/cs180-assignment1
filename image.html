@@ -7,37 +7,158 @@
             <li class="navBarElement selected"><a href="./image.html">Image</a></li>
             <li class="navBarElement"><a href="./video.html">Video</a></li>
             <li class="navBarElement"><a href="./table.html">Table</a></li>
+            <li class="navBarElement"><a href="./email.html">Email</a></li>
         </ul>
     </head>
 
     <body>
         <br><br><br>
-        <h2>Porsche 911 through generations: 1964-2016</h2>
-        <img class="porscheImage" src="./assets/porsche_1.jpg">
-        <img class="porscheImage" src="./assets/porsche_2.jpg">
-        <img class="porscheImage" src="./assets/porsche_3.jpg">
-        <img class="porscheImage" src="./assets/porsche_4.jpg">
-        <img class="porscheImage" src="./assets/porsche_5.jpeg">
-        <img class="porscheImage" src="./assets/porsche_6.jpg">
-        <img class="porscheImage" src="./assets/porsche_7.jpg">
-        
+        <h2>Porsche 911 through generations: gallery</h2>
+        <button id="scrollButton" class="scrollToTop">Back To Top</button>
+        <div class="flex">
+            <div class="imgWrapper">
+                <img id="car1" class="porscheImage" src="./assets/porsche_1.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car2" class="porscheImage" src="./assets/porsche_2.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car3" class="porscheImage" src="./assets/porsche_3.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car4" class="porscheImage" src="./assets/porsche_4.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car5" class="porscheImage" src="./assets/porsche_5.jpeg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car6" class="porscheImage" src="./assets/porsche_6.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car7" class="porscheImage" src="./assets/porsche_7.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car8" class="porscheImage" src="./assets/porsche_8.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car9" class="porscheImage" src="./assets/porsche_9.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car10" class="porscheImage" src="./assets/porsche_10.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car11" class="porscheImage" src="./assets/porsche_11.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car12" class="porscheImage" src="./assets/porsche_12.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car13" class="porscheImage" src="./assets/porsche_13.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car14" class="porscheImage" src="./assets/porsche_14.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car15" class="porscheImage" src="./assets/porsche_15.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car16" class="porscheImage" src="./assets/porsche_16.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car17" class="porscheImage" src="./assets/porsche_17.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car18" class="porscheImage" src="./assets/porsche_18.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car19" class="porscheImage" src="./assets/porsche_19.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car20" class="porscheImage" src="./assets/porsche_20.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car21" class="porscheImage" src="./assets/porsche_21.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car22" class="porscheImage" src="./assets/porsche_22.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car23" class="porscheImage" src="./assets/porsche_23.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car24" class="porscheImage" src="./assets/porsche_24.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car25" class="porscheImage" src="./assets/porsche_25.jpg">
+            </div>
+            <div class="imgWrapper">
+                <img id="car26" class="porscheImage" src="./assets/porsche_26.jpg">
+            </div>
+           
+        </div>
     </body>
 
 </html>
 
 <style>
 
-    img.porscheImage {
-        width: 400px;
-        height: 300px;
-        margin-right: 150px;
-        margin-bottom: 100px;
+    .scrollToTop {
+        display: none;
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 2; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: rgb(145, 143, 143); /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+    }
+
+
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+    }
+    .flex > * {
+        margin: 10px 10px 100px 10px;
+
+    }
+
+    .imgWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 250px;
+        max-width: 23%;
+        height: 230px;
+        
+    }
+    .imgWrapper img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .grayIn {
+        filter: grayscale(100%);
+        transition: all 1.5s ease;
+    }
+
+    .grayOut {
+        filter: grayscale(0%);
+        transition: all 1.5s ease;
     }
 
     li.navBarElement{
         display: inline;
         float: left;
         width: 100px;
+        min-width: 60px;
         background-color: #9966ff;
         margin-top :auto;
         margin-bottom: auto;
@@ -47,7 +168,15 @@
     }
     
     li.navBarElement.selected{
-        background-color: #8000ff;
+        background-color: #6a02d3;
+    }
+
+    li.navBarElement.selected:hover{
+        background-color: #6a02d3;
+    }
+
+    li.navBarElement:hover{
+        background-color: #c0a0ff;
     }
     
     li a {
@@ -65,7 +194,478 @@
       margin: 0;
       padding: 0;
       width: 100%;
-    
+    }
+
+    body {
+        /* margin: 0; */
     }
     
     </style>
+
+    <script>
+        let car1 = document.getElementById("car1")
+        let car2 = document.getElementById("car2")
+        let car3 = document.getElementById("car3")
+        let car4 = document.getElementById("car4")
+        let car5 = document.getElementById("car5")
+        let car6 = document.getElementById("car6")
+        let car7 = document.getElementById("car7")
+        let car8 = document.getElementById("car8")
+        let car9 = document.getElementById("car9")
+        let car10 = document.getElementById("car10")
+        let car11 = document.getElementById("car11")
+        let car12 = document.getElementById("car12")
+        let car13 = document.getElementById("car13")
+        let car14 = document.getElementById("car14")
+        let car15 = document.getElementById("car15")
+        let car16 = document.getElementById("car16")
+        let car17 = document.getElementById("car17")
+        let car18 = document.getElementById("car18")
+        let car19 = document.getElementById("car19")
+        let car20 = document.getElementById("car20")
+        let car21 = document.getElementById("car21")
+        let car22 = document.getElementById("car22")
+        let car23 = document.getElementById("car23")
+        let car24 = document.getElementById("car24")
+        let car25 = document.getElementById("car25")
+        let car26 = document.getElementById("car26")
+        var body = document.getElementsByTagName('body')[0]
+
+        let car1List = Array.from(document.querySelectorAll(".porscheImage:not(#car1)"))
+        let car2List = Array.from(document.querySelectorAll(".porscheImage:not(#car2)"))
+        let car3List = Array.from(document.querySelectorAll(".porscheImage:not(#car3)"))
+        let car4List = Array.from(document.querySelectorAll(".porscheImage:not(#car4)"))
+        let car5List = Array.from(document.querySelectorAll(".porscheImage:not(#car5)"))
+        let car6List = Array.from(document.querySelectorAll(".porscheImage:not(#car6)"))
+        let car7List = Array.from(document.querySelectorAll(".porscheImage:not(#car7)"))
+        let car8List = Array.from(document.querySelectorAll(".porscheImage:not(#car8)"))
+        let car9List = Array.from(document.querySelectorAll(".porscheImage:not(#car9)"))
+        let car10List = Array.from(document.querySelectorAll(".porscheImage:not(#car10)"))
+        let car11List = Array.from(document.querySelectorAll(".porscheImage:not(#car11)"))
+        let car12List = Array.from(document.querySelectorAll(".porscheImage:not(#car12)"))
+        let car13List = Array.from(document.querySelectorAll(".porscheImage:not(#car13)"))
+        let car14List = Array.from(document.querySelectorAll(".porscheImage:not(#car14)"))
+        let car15List = Array.from(document.querySelectorAll(".porscheImage:not(#car15)"))
+        let car16List = Array.from(document.querySelectorAll(".porscheImage:not(#car16)"))
+        let car17List = Array.from(document.querySelectorAll(".porscheImage:not(#car17)"))
+        let car18List = Array.from(document.querySelectorAll(".porscheImage:not(#car18)"))
+        let car19List = Array.from(document.querySelectorAll(".porscheImage:not(#car19)"))
+        let car20List = Array.from(document.querySelectorAll(".porscheImage:not(#car20)"))
+        let car21List = Array.from(document.querySelectorAll(".porscheImage:not(#car21)"))
+        let car22List = Array.from(document.querySelectorAll(".porscheImage:not(#car22)"))
+        let car23List = Array.from(document.querySelectorAll(".porscheImage:not(#car23)"))
+        let car24List = Array.from(document.querySelectorAll(".porscheImage:not(#car24)"))
+        let car25List = Array.from(document.querySelectorAll(".porscheImage:not(#car25)"))
+        let car26List = Array.from(document.querySelectorAll(".porscheImage:not(#car26)"))
+
+        let listOfCars = Array.from(document.querySelectorAll(".porscheImage"))
+
+
+        car1.onmouseover = function() {
+            console.log("hovering over car1")
+            car1List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car1.onmouseout = function() {
+            console.log("mouse out car1")
+            car1List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car2.onmouseover = function() {
+            console.log("hovering over car2")
+            car2List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car2.onmouseout = function() {
+            console.log("mouse out car2")
+            car2List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car3.onmouseover = function() {
+            console.log("hovering over car3")
+            car3List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car3.onmouseout = function() {
+            console.log("mouse out car3")
+            car3List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car4.onmouseover = function() {
+            console.log("hovering over car4")
+            car4List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car4.onmouseout = function() {
+            console.log("mouse out car4")
+            car4List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car5.onmouseover = function() {
+            console.log("hovering over car5")
+            car5List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car5.onmouseout = function() {
+            console.log("mouse out car5")
+            car5List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car6.onmouseover = function() {
+            console.log("hovering over car6")
+            car6List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car6.onmouseout = function() {
+            console.log("mouse out car6")
+            car6List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car7.onmouseover = function() {
+            console.log("hovering over car7")
+            car7List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car7.onmouseout = function() {
+            console.log("mouse out car7")
+            car7List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car8.onmouseover = function() {
+            console.log("hovering over car8")
+            car8List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car8.onmouseout = function() {
+            console.log("mouse out car8")
+            car8List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car9.onmouseover = function() {
+            car9List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car9.onmouseout = function() {
+            car9List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car10.onmouseover = function() {
+            car10List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car10.onmouseout = function() {
+            car10List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car11.onmouseover = function() {
+            car11List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car11.onmouseout = function() {
+            car11List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car12.onmouseover = function() {
+            car12List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car12.onmouseout = function() {
+            car12List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car13.onmouseover = function() {
+            car13List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car13.onmouseout = function() {
+            car13List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car14.onmouseover = function() {
+            car14List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car14.onmouseout = function() {
+            car14List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car15.onmouseover = function() {
+            car15List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car15.onmouseout = function() {
+            car15List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car16.onmouseover = function() {
+            car16List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car16.onmouseout = function() {
+            car16List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car17.onmouseover = function() {
+            car17List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car17.onmouseout = function() {
+            car17List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car18.onmouseover = function() {
+            car18List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car18.onmouseout = function() {
+            car18List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car19.onmouseover = function() {
+            car19List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car19.onmouseout = function() {
+            car19List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car20.onmouseover = function() {
+            car20List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car20.onmouseout = function() {
+            car20List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car21.onmouseover = function() {
+            car21List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car21.onmouseout = function() {
+            car21List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car22.onmouseover = function() {
+            car22List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car22.onmouseout = function() {
+            car22List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car23.onmouseover = function() {
+            car23List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car23.onmouseout = function() {
+            car23List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car24.onmouseover = function() {
+            car24List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car24.onmouseout = function() {
+            car24List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        car25.onmouseover = function() {
+            car25List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car25.onmouseout = function() {
+            car25List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+
+        car26.onmouseover = function() {
+            car26List.forEach(x => {
+                x.classList.remove("grayOut")
+                x.classList.add("grayIn")
+            })   
+        }
+        car26.onmouseout = function() {
+            car26List.forEach(x => {
+                x.classList.remove("grayIn")
+                x.classList.add("grayOut")
+            })   
+        }
+
+        document.querySelector("body").onscroll = function () {
+            console.log("scrolling")
+            if(window.scrollY / document.body.offsetHeight > 0.25) document.getElementById("scrollButton").style.display = "block"
+            else document.getElementById("scrollButton").style.display = "none"
+        }
+
+        document.getElementById("scrollButton").onclick = function (){
+            window.scroll(0,0)
+        }
+
+
+        listOfCars.forEach(x => {
+            x.onclick = function(){
+                console.log("creating overlay")
+                let flexelement = document.querySelector(".flex")
+                let grayOverlay = document.createElement("div")
+                let overLayImage = document.createElement("img")
+                overLayImage.setAttribute("src", x.getAttribute("src"))
+                overLayImage.style.width = "90vmin"
+                overLayImage.style.opacity = "1"
+                overLayImage.style.zIndex = "10000"
+                overLayImage.style.margin = "auto"
+                overLayImage.style.position = "fixed"
+                overLayImage.style.top = "50vh"
+                overLayImage.style.left = "50vw"
+                overLayImage.style.transform = "translate( -50%, -50% )"
+
+                grayOverlay.style.position = "fixed"
+                grayOverlay.style.display = "flex"
+                grayOverlay.style.alignItems = "center"
+                grayOverlay.style.justifyContent = "center"
+                grayOverlay.style.top = "0"
+                grayOverlay.style.left = "0"
+                grayOverlay.style.width = "100%"
+                grayOverlay.style.height = "100%"
+                grayOverlay.style.backgroundColor = "#000000"
+                grayOverlay.style.opacity = "0"
+
+                grayOverlay.onclick = function() {
+                    flexelement.removeChild(overLayImage)
+                    flexelement.removeChild(grayOverlay)
+                }
+
+                
+                flexelement.appendChild(grayOverlay)
+                flexelement.appendChild(overLayImage)
+            }
+        })
+
+
+        
+
+    </script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <ul class="headerNavBar">
+            <li class="navBarElement"><a href="./text.html">Text</a></li>
+            <li class="navBarElement"><a href="./image.html">Image</a></li>
+            <li class="navBarElement"><a href="./video.html">Video</a></li>
+            <li class="navBarElement"><a href="./table.html">Table</a></li>
+            <li class="navBarElement selected"><a href="./email.html">Email</a></li>
+        </ul>
+    </head>
+
+    <body>
+        <br><br><br>
+        <h4>Please enter your email:</h4>
+        <input type="text" id="emailinput" name="email">
+        <p id="responseToValidation">V</p>
+        <br>
+        <button onclick="submitClicked();">Validate Email</button>
+    </body>
+</html>
+
+<style>
+
+    #responseToValidation {
+        opacity: 0;
+    }
+
+    li.navBarElement{
+        display: inline;
+        float: left;
+        width: 100px;
+        background-color: #9966ff;
+        margin-top :auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        border-right: 1px solid black;
+    }
+    
+    li.navBarElement.selected{
+        background-color: #6a02d3;
+    }
+
+    li.navBarElement.selected:hover{
+        background-color: #6a02d3;
+    }
+
+    li.navBarElement:hover{
+        background-color: #c0a0ff;
+    }
+
+    li.navBarElement a {
+        color: white;
+        display: block;
+        font-family: "Courier";
+        text-decoration: none;
+        padding: 14px 16px;
+        text-align: center;
+        
+    }
+
+    ul.headerNavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    }
+
+</style>
+
+<script>
+    function submitClicked() {
+        console.log("validation clicked")
+
+        let text = document.getElementById('emailinput').value.toString();
+
+        let emailMalformed = false;
+
+        console.log('text says ', text)
+
+        if(text.indexOf('@') < 0)  emailMalformed = true;
+        else if(text.length < 4 ) emailMalformed = true;
+        else if(text.substring(text.length - 1 - 3) != ".edu" && text.substring(text.length - 1 - 3) != ".com") emailMalformed = true;
+
+
+        if(emailMalformed) document.getElementById("responseToValidation").innerHTML = "Invalid email address."
+        else document.getElementById("responseToValidation").innerHTML = "Email successfully recorded"
+
+        document.getElementById("responseToValidation").style.opacity = 1;
+    }
+</script>
